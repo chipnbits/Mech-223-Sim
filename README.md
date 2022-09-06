@@ -1,3 +1,9 @@
+### File Description
+
+- /source/LaunchSimv7.m : The launch simulation in Matlab
+- Funnel_Kinematics.pdf : A detailed description of the mathematical treatment of a marble rolling in a funnel
+- SimulationFlow : The launch simulation in Matlab
+
 ### MECH 223 Cassani Launch Simulator
 
 Project version 7 Updates:
