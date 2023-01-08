@@ -1,6 +1,4 @@
-A video demonstration of the device can be found by clicking the image below:
 
-[![Video Demonstration](https://img.youtube.com/vi/86UjNUjD3cs/0.jpg)](https://www.youtube.com/watch?v=86UjNUjD3cs)
 
 ### File Description
 
@@ -19,6 +17,11 @@ Project version 7 Updates:
 Project version 6 Updates:
     - Updates to the funnel trajectory modeling
     - Introduction of a new launch trigger parameter, Time.  See notes in the Orbiter Launch section   
+
+#### Video Demo
+A video demonstration of the device can be found by clicking the image below:
+
+[![Video Demonstration](https://img.youtube.com/vi/86UjNUjD3cs/0.jpg)](https://www.youtube.com/watch?v=86UjNUjD3cs)
 
 ##### Lander Launch Trajectory Modeling
 
