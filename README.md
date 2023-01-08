@@ -1,3 +1,7 @@
+A video demonstration of the device can be found by clicking the image below:
+
+[![Video Demonstration](https://img.youtube.com/vi/86UjNUjD3cs/0.jpg)](https://www.youtube.com/watch?v=86UjNUjD3cs)
+
 ### File Description
 
 - /source/LaunchSimv7.m : The launch simulation in Matlab
