@@ -1,5 +1,6 @@
 % A simulation environment to test out different configurations for the
 % Mech 223 orbital launcher design project
+% Final commit
 
 %Board Dimensions and constants
 BD.area = [0 7 0 2.5]; %m
@@ -120,7 +121,7 @@ GUI.field.ang.ValueChangedFcn = @updateCursor;
     function makeLander(x0, y0, vx0,vy0,t0)
         L.x0 = x0;
         L.y0 = y0;
-        x = 5
+        x = 5;
         
         L.vx0 = vx0;
         L.vy0 = vy0;
@@ -916,7 +917,7 @@ GUI.World.gfx3d = drawSimMesh(BD, GUI.surf);
 GUI.World.gfx2d = drawSimulationSurface(BD, OB, GUI.board);
 
 function gfx3d = drawSimMesh(BD, ax)
-    % set the mesh resolution (del) and the extention factor in terms of
+    % set the mesh resolution (del) and the extension factor in terms of
     % radius (reach)
     del = .01;
     reach = 1.1;
@@ -946,13 +947,17 @@ function gfx3d = drawSimMesh(BD, ax)
     % use the command get(GUI.surf, 'View') to get data on which view the
     % window has to set preferred initial view, here the view is set
     view(ax, -10, 50);
-    axis( GUI.surf,'manual')
+    axis( ax,'manual')
+
+    %For some reason manual is not locking the desired limits
+    axis(ax, [3 4 1.4 2.4 -.5 0])
     
     % create laser sights on 3d mesh
     gfx3d.lineHandles = setLineHandles(ax);       
 end
 
 function gfx2d = drawSimulationSurface(BD, OB, ax)
+    
     
 %Draw the playing surface and borders
 gfx2d.top = rectangle(ax, 'Position',[0,0,7,2.5],'FaceColor',[250 227 201]/255,...
@@ -981,8 +986,11 @@ gfx2d.orbiter = rectangle(ax, 'Position',...
     'FaceColor',[180 0 0]/255);
 set(gfx2d.orbiter, 'Visible', 'off');
 
-hold( ax, 'on' )   
-axis( ax,'manual')
+% Lock the viewport axes for 2D
+hold( ax, 'on' )  
+axis(ax, 'manual');
+axis(ax, BD.area);
+
 gfx2d.landerTube = quiver(ax, ...
     OB.pos0(1)+OB.cannonOffset(1), OB.pos0(2)+OB.cannonOffset(2),...
     0,1,.15,...
